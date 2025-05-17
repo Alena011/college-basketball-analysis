@@ -32,3 +32,42 @@ pip install -r requirements.txt
 
 Запустіть
 jupyter notebook
+
+
+# Лабораторна робота №2: Прогнозування віку краба
+
+## Опис
+Розв'язання задачі регресії для прогнозування віку краба. Використані методи:
+- Gradient Boosting
+- Support Vector Machine (SVM)
+- Bayesian Ridge
+
+## Інструкція
+
+### 1. Встановлення залежностей
+```bash
+pip install pandas scikit-learn matplotlib jupyter
+
+2. Запуск проєкту
+Склонуйте репозиторій:
+git clone https://github.com/Alena011/college-basketball-analysis.git
+
+3 Запустіть Jupyter Notebook:
+jupyter notebook notebooks/lab_2_crab_age.ipynb
+
+
+3. Дані
+Датасет CrabAgePrediction.csv містить ознаки крабів. Файл розташований у папці data/.
+
+Результати
+Графіки та метрики збережено у папці results/crab_age/.
+
+Порівняння моделей:
+
+Gradient Boosting: RMSE = 2.10
+
+SVM: RMSE = 2.21
+
+Bayesian Ridge: RMSE = 2.15
+
+
