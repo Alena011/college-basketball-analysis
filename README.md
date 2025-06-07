@@ -169,3 +169,44 @@ jupyter notebook
 pip install -r requirements.txt
 jupyter notebook notebooks/lab_4_classification.ipynb
 
+
+
+# Лабораторная работа №5: Классификация изображений с использованием EuroSAT
+
+## Цель
+
+Построить нейросетевую модель для классификации спутниковых снимков из датасета [EuroSAT](https://www.tensorflow.org/datasets/catalog/eurosat) с использованием:
+- Полносвязной нейросети (Fully Connected Neural Network)
+
+## Датасет
+
+- **Название:** EuroSAT
+- **Источник:** `tensorflow_datasets`
+- **Классы:** 10 типов ландшафтов:
+  - AnnualCrop, Forest, HerbaceousVegetation, Highway, Industrial, Pasture, PermanentCrop, Residential, River, SeaLake
+- **Размер изображений:** изначально 64x64, масштабируются до 224x224
+
+## Этапы
+
+1. Загрузка и разбиение датасета (70% train / 30% test)
+2. Предобработка изображений (`resize`, нормализация `mobilenet_v2`)
+3. Обучение Fully Connected модели:
+    - 3 скрытых слоя по 64 нейрона
+    - Активация: ReLU
+    - Выходной слой: softmax
+4. Визуализация:
+    - графики точности и потерь
+    - примеры предсказаний
+
+##  Результаты
+
+- Оценка точности модели: (указать точность, например: `0.85`)
+- Графики обучения:
+  - Accuracy vs Epochs
+  - Loss vs Epochs
+- Визуальные предсказания на 25 тестовых изображениях
+
+##  Зависимости
+
+```bash
+pip install tensorflow==2.14 tensorflow-datasets matplotlib numpy
